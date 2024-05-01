@@ -1,0 +1,17 @@
+<!-- <p>{{getproduct | json}}</p> -->
+
+
+<div class="card mb-4">
+    <div class="card-header">
+        {{getproduct.pname}}
+    </div>
+    <div class="card-body">
+        {{getproduct.pdetails}}
+        The Product is {{getproduct.pname}} and It's status is <strong>{{getproduct.pstatus}}</strong>
+    </div>
+    <div class="card-footer d-flex justify-content-between">
+        <button mat-raised-button color="accent" (click)="onChangeStatus(allProductStatus.Inprogress)">Inprogress</button>
+        <button mat-raised-button color="accent" (click)="onChangeStatus(allProductStatus.Dispatched)">Dispatched</button>
+        <button mat-raised-button color="accent"(click)="onChangeStatus(allProductStatus.Delivered)" >Delivered</button>
+    </div>
+</div>
