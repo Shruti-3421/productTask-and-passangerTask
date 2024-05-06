@@ -32,14 +32,14 @@ export class ProductsService {
 
   addNewProd(prod: Iproduct){
     this.productsArr.unshift(prod);
-    this._snackbar.snackBar(`New Product ${prod.pname} is added`)
+    this._snackbar.snackbar(`New Product ${prod.pname} is added`)
   }
 
   updatedPost(id: string, updateStatus: ProductsStatus){
     this.productsArr.forEach(prod =>{
       if(prod.id === id){
         prod.pstatus = updateStatus;
-        this._snackbar.snackBar(`The status of product ${prod.pname} is updated`)
+        this._snackbar.snackbar(`The status of product ${prod.pname} is updated`)
       }
     })
   }

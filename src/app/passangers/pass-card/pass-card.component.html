@@ -1,0 +1,24 @@
+<!-- <p>
+    {{passObj | json}}
+</p> -->
+  
+<div class="card mb-4">
+    <div class="card-body">
+        <div class="form-group">
+            <input 
+            [disabled]="!isinEditMode"
+            type="text" #fullname [value]="passObj.fullname" class="form-control">
+        </div>
+        <p>
+            CheckIn Date : {{passObj.checkInDate  ? (passObj.checkInDate):'Not CheckIn yet'}};
+        </p>
+        <p>
+            Child Count: {{passObj.children ? (passObj.children.length) : 0}}
+        </p>
+    </div>
+    <div class="card-footer">
+        <button mat-raised-button color="primary" (click)="onEdit()" *ngIf="!isinEditMode">Edit</button>
+        <button mat-raised-button color="primary" class="ml-3" (click)="onDone(fullname.value)" *ngIf="isinEditMode">Done</button>
+        <button mat-raised-button color="warn" class="ml-3" (click)="onDelete()">Delete</button>
+    </div>
+</div>

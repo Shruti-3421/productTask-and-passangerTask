@@ -1,0 +1,17 @@
+
+
+<app-pass-count 
+[totalCheckInCount]="getcheckIncount()"
+[totalPassCount]="passArr.length"></app-pass-count>
+
+ <!-- {{passArr | json}} -->
+
+
+<ul class="list-group mb-4">
+   <li class="list-group-item" *ngFor="let pass of passArr">
+     {{pass.fullname}}
+   </li>
+</ul>
+
+<app-pass-card [passObj]="pass" *ngFor="let pass of passArr"></app-pass-card>
+
